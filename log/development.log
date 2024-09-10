@@ -63,3 +63,7 @@ Migrating to CreateBooks (20240909234227)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "bb3c9ab7dc362f22694ff2418828058c17451928"], ["created_at", "2024-09-09 23:46:05.905135"], ["updated_at", "2024-09-09 23:46:05.905135"]]
   [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Exists? (28.2ms)[0m  [1m[34mSELECT 1 AS one FROM "books" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Count (28.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 0]]
